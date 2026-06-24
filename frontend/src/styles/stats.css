@@ -1,0 +1,30 @@
+.stats {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+
+.stats-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.stat-card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+.stat-card h3 {
+  margin-top: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.stat-card p {
+  margin: 0.75rem 0 0;
+  font-size: 2rem;
+  font-weight: 700;
+}

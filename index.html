@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>TicketBridge Pro</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://unpkg.com/html5-qrcode"></script>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar">
+
+<div class="logo">
+🎟️ TicketBridge Pro
+</div>
+
+<div class="nav-actions">
+
+<button id="darkModeBtn">
+🌙 Dark Mode
+</button>
+
+<button id="openUploadModal">
++ Sell Ticket
+</button>
+
+</div>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>
+Don't Waste Tickets.<br>
+Resell Them Instantly.
+</h1>
+
+<p>
+Buy and sell movie tickets, IPL tickets, concert passes,
+event tickets and more.
+</p>
+
+<div class="hero-buttons">
+
+<button id="browseBtn">
+Browse Tickets
+</button>
+
+<button id="sellBtn">
+Sell Ticket
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section class="stats">
+
+<div class="stat-card">
+<h2 id="ticketCount">0</h2>
+<p>Tickets Listed</p>
+</div>
+
+<div class="stat-card">
+<h2 id="sellerCount">0</h2>
+<p>Verified Sellers</p>
+</div>
+
+<div class="stat-card">
+<h2 id="soldCount">0</h2>
+<p>Tickets Sold</p>
+</div>
+
+</section>
+
+<!-- SEARCH -->
+
+<section class="search-section">
+
+<input
+type="text"
+id="searchInput"
+placeholder="Search Tickets..."
+>
+
+<select id="categoryFilter">
+
+<option value="">
+All Categories
+</option>
+
+<option value="Movie">
+Movie
+</option>
+
+<option value="IPL">
+IPL
+</option>
+
+<option value="Concert">
+Concert
+</option>
+
+<option value="Show">
+Show
+</option>
+
+</select>
+
+</section>
+
+<!-- MARKETPLACE -->
+
+<section class="marketplace">
+
+<h2>
+Available Tickets
+</h2>
+
+<div id="ticketContainer">
+
+</div>
+
+</section>
+
+<!-- SELLER PROFILE -->
+
+<section class="seller-profile">
+
+<h2>
+Top Seller
+</h2>
+
+<div class="profile-card">
+
+<img
+src="https://i.pravatar.cc/150?img=12"
+class="profile-pic"
+>
+
+<h3 id="sellerName">
+Sai Sandesh
+</h3>
+
+<p>
+⭐ Rating: 4.9
+</p>
+
+<p>
+🎟 Tickets Sold: 52
+</p>
+
+<p>
+🛡 Verified Seller
+</p>
+
+</div>
+
+</section>
+
+<!-- REQUESTS -->
+
+<section class="requests">
+
+<h2>
+Purchase Requests
+</h2>
+
+<div id="requestContainer">
+
+</div>
+
+</section>
+
+<!-- CHAT MODAL -->
+
+<div id="chatModal" class="modal">
+
+<div class="modal-content">
+
+<div class="chat-header">
+
+<h3>
+Chat Seller
+</h3>
+
+<span id="closeChat">
+✖
+</span>
+
+</div>
+
+<div id="chatMessages">
+
+</div>
+
+<div class="chat-input">
+
+<input
+type="text"
+id="chatInput"
+placeholder="Type Message..."
+>
+
+<button id="sendMessage">
+Send
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- UPLOAD MODAL -->
+
+<div id="uploadModal" class="modal">
+
+<div class="modal-content">
+
+<h2>
+Upload Ticket
+</h2>
+
+<input
+type="text"
+id="eventName"
+placeholder="Event Name"
+>
+
+<select id="eventType">
+
+<option>
+Movie
+</option>
+
+<option>
+IPL
+</option>
+
+<option>
+Concert
+</option>
+
+<option>
+Show
+</option>
+
+</select>
+
+<input
+type="date"
+id="eventDate"
+>
+
+<input
+type="number"
+id="ticketPrice"
+placeholder="Ticket Price"
+>
+
+<input
+type="file"
+id="ticketImage"
+accept="image/*"
+>
+
+<div id="qrResult">
+
+Waiting For QR Scan...
+
+</div>
+
+<div class="ai-price">
+
+<h4>
+AI Suggested Price
+</h4>
+
+<p id="aiPrice">
+₹0
+</p>
+
+</div>
+
+<button id="uploadTicketBtn">
+Upload Ticket
+</button>
+
+<button id="closeUploadModal">
+Cancel
+</button>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>
+© 2026 TicketBridge Pro
+</p>
+
+</footer>
+<script src="https://unpkg.com/html5-qrcode"></script>
+<script src="qrScanner.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

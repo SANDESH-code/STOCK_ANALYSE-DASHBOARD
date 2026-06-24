@@ -1,0 +1,54 @@
+.navbar {
+  background: var(--card);
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  box-shadow: var(--shadow);
+}
+
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-brand h1 {
+  margin: 0;
+  color: var(--primary);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a,
+.nav-user button,
+.nav-auth a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.nav-links a:hover,
+.nav-auth a:hover {
+  color: var(--primary);
+}
+
+.theme-btn {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+.user-menu {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
